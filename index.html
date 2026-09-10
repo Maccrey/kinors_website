@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="KINORA — an AI companion and family-care service that helps families notice small changes in a parent's everyday life." />
+  <meta name="theme-color" content="#f4efe5" />
+  <title>KINORA — Stay close, even from afar</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav-row">
+      <a class="brand" href="#top" aria-label="KINORA home">
+        <span class="brand-word">KINORA</span><span class="brand-paw">✦</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#why" data-i18n="nav.why">Why KINORA?</a>
+        <a href="#features" data-i18n="nav.features">Key features</a>
+        <a href="#apps" data-i18n="nav.apps">Service screens</a>
+        <a href="#story" data-i18n="nav.story">Story</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <div class="language-wrap">
+          <button id="languageButton" class="language-button" type="button" aria-expanded="false">
+            <span class="globe">◎</span><span id="currentLanguage">English</span>
+          </button>
+          <div id="languageMenu" class="language-menu" hidden>
+            <button data-lang="ko">🇰🇷 한국어</button>
+            <button data-lang="en">🇺🇸 English</button>
+            <button data-lang="zh">🇨🇳 中文</button>
+            <button data-lang="ja">🇯🇵 日本語</button>
+            <button data-lang="th">🇹🇭 ไทย</button>
+            <button data-lang="vi">🇻🇳 Tiếng Việt</button>
+          </div>
+        </div>
+        <a class="nav-cta js-preorder" href="#preorder" data-i18n="nav.cta">Pre-register</a>
+        <button id="mobileMenuButton" class="mobile-menu-button" type="button" aria-label="Menu">☰</button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu" hidden>
+      <a href="#why" data-i18n="nav.why">Why KINORA?</a>
+      <a href="#features" data-i18n="nav.features">Key features</a>
+      <a href="#apps" data-i18n="nav.apps">Service screens</a>
+      <a href="#story" data-i18n="nav.story">Story</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-blob hero-blob-one"></div>
+      <div class="hero-blob hero-blob-two"></div>
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="hand-note note-top" data-i18n="hero.noteTop">A brighter day, together. ♥</p>
+          <h1 id="heroTitle">
+            <span class="hero-line nowrap" data-i18n="hero.title1">Stay close,</span>
+            <span class="hero-line hero-line-accent nowrap" data-i18n="hero.title2">even from afar.</span>
+          </h1>
+          <p class="hero-kicker" data-i18n="hero.kicker">Don't miss the small changes in your parents. KINORA.</p>
+          <p class="hero-body" data-i18n="hero.body">KINORA is a family-care service where an AI companion talks naturally with your parent, learns everyday patterns, and helps the family notice meaningful changes.</p>
+          <div class="hero-actions">
+            <a class="button button-primary js-preorder" href="#preorder" data-i18n="hero.ctaPrimary">Pre-register now</a>
+            <a class="button button-outline" href="#story"><span class="play">▶</span><span data-i18n="hero.ctaSecondary">Watch the story</span></a>
+          </div>
+        </div>
+
+        <div class="hero-art reveal delay-1">
+          <div class="phone phone-hero" aria-hidden="true">
+            <div class="phone-notch"></div>
+            <div class="phone-screen senior-phone-screen">
+              <div class="screen-status"><span>9:41</span><span>▮▮ ◔</span></div>
+              <div class="screen-brand">KINORA<span>✦</span></div>
+              <div class="screen-bubble typing-bubble" data-i18n="phone.greeting"></div>
+              <img class="screen-pet hero-phone-pet" src="assets/dog_phone_smile.png" alt="" />
+              <div class="screen-actions-grid">
+                <div><span>💬</span><small data-i18n="phone.talk">Talk</small></div>
+                <div><span>🍚</span><small data-i18n="phone.meal">Meal</small></div>
+                <div><span>💧</span><small data-i18n="phone.water">Water</small></div>
+                <div><span>🚶</span><small data-i18n="phone.walk">Walk</small></div>
+              </div>
+            </div>
+          </div>
+          <div class="character-trio hero-trio" aria-label="KINORA companion characters">
+            <img class="trio-image" src="assets/mascot_trio.png" alt="KINORA companion characters" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="feature-strip">
+      <div class="shell feature-grid">
+        <article class="feature reveal"><div class="feature-icon green">💬</div><h3 data-i18n="features.f1t">Conversations that remember</h3><p data-i18n="features.f1b">Yesterday's story can shape today's question.</p></article>
+        <article class="feature reveal delay-1"><div class="feature-icon orange">▥</div><h3 data-i18n="features.f2t">Daily pattern insight</h3><p data-i18n="features.f2b">Meals, sleep and activity are understood in context.</p></article>
+        <article class="feature reveal delay-2"><div class="feature-icon red">♥</div><h3 data-i18n="features.f3t">Health data connection</h3><p data-i18n="features.f3b">Permitted device health data enriches the picture.</p></article>
+        <article class="feature reveal delay-3"><div class="feature-icon yellow">🔔</div><h3 data-i18n="features.f4t">Change detection</h3><p data-i18n="features.f4b">Meaningful differences from the usual are highlighted.</p></article>
+        <article class="feature reveal delay-4"><div class="feature-icon blue">👥</div><h3 data-i18n="features.f5t">Family connection</h3><p data-i18n="features.f5b">Family is notified only when confirmation is useful.</p></article>
+      </div>
+    </section>
+
+    <section id="why" class="warm-section">
+      <div class="shell warm-grid">
+        <div class="warm-copy reveal">
+          <span class="section-eyebrow" data-i18n="why.eyebrow">For Parents</span>
+          <h2 data-i18n="why.title">A warmer today with an AI companion.</h2>
+          <p data-i18n="why.body">The dog, cat and fluffy friend start conversations, remember everyday stories and make check-ins feel natural rather than clinical.</p>
+          <a class="button button-primary parent-app-cta" href="#apps" data-i18n="why.cta">See the parent app</a>
+        </div>
+        <div class="phone phone-section reveal delay-1" aria-hidden="true">
+          <div class="phone-notch"></div>
+          <div class="phone-screen senior-phone-screen section-phone-screen">
+            <div class="screen-status"><span>9:41</span><span>▮▮ ◔</span></div>
+            <div class="screen-brand">KINORA<span>✦</span></div>
+            <div class="screen-bubble typing-bubble" data-i18n="phone.todayQuestion"></div>
+            <img class="screen-pet section-pet" src="assets/dog_phone_smile.png" alt="" />
+            <div class="screen-actions-grid">
+              <div><span>💬</span><small data-i18n="phone.talk">Talk</small></div>
+              <div><span>🍚</span><small data-i18n="phone.meal">Meal</small></div>
+              <div><span>💧</span><small data-i18n="phone.water">Water</small></div>
+              <div><span>🚶</span><small data-i18n="phone.walk">Walk</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="warm-copy family-copy reveal delay-2">
+          <span class="section-eyebrow" data-i18n="family.eyebrow">For Family</span>
+          <h2 data-i18n="family.title">Family peace of mind feels closer.</h2>
+          <p data-i18n="family.body">When today's pattern looks different from usual, KINORA Family summarizes what changed, why it matters, and what to do next.</p>
+          <a class="button button-primary" href="#apps" data-i18n="family.cta">See the family app</a>
+        </div>
+        <div class="phone phone-section reveal delay-3" aria-hidden="true">
+          <div class="phone-notch"></div>
+          <div class="phone-screen family-phone-screen section-phone-screen">
+            <div class="screen-status"><span>9:41</span><span>▮▮ ◔</span></div>
+            <div class="family-head"><strong data-i18n="phone.familyTitle">Today's status</strong><small>2026. 09. 09</small></div>
+            <div class="family-summary"><span class="summary-dot">●</span><strong data-i18n="phone.lookCloser">Take a closer look</strong></div>
+            <ul class="family-list">
+              <li><span>🚶</span><div><strong data-i18n="phone.activity">Activity</strong><small data-i18n="phone.activityValue">Lower than usual</small></div></li>
+              <li><span>🍚</span><div><strong data-i18n="phone.meal">Meal</strong><small data-i18n="phone.mealValue">Breakfast was small</small></div></li>
+              <li><span>🌙</span><div><strong data-i18n="phone.sleep">Sleep</strong><small data-i18n="phone.sleepValue">1 hour less than usual</small></div></li>
+              <li><span>🙂</span><div><strong data-i18n="phone.mood">Mood</strong><small data-i18n="phone.moodValue">A little tired</small></div></li>
+            </ul>
+            <button class="family-call" data-i18n="phone.call">Call now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="apps" class="apps-section">
+      <div class="shell apps-grid">
+        <article class="app-copy-card reveal">
+          <div>
+            <span class="section-eyebrow">KINORA App</span>
+            <h2 data-i18n="apps.seniorTitle">Simple for parents, warm like a friend.</h2>
+            <ul class="check-list">
+              <li data-i18n="apps.senior1">Natural conversation with a familiar character</li>
+              <li data-i18n="apps.senior2">Meal, water, medication and mood check-ins</li>
+              <li data-i18n="apps.senior3">Large buttons, simple language and voice support</li>
+            </ul>
+          </div>
+          <img src="assets/dog_full.png" alt="KINORA dog companion" />
+        </article>
+        <article class="app-copy-card family-card reveal delay-1">
+          <div>
+            <span class="section-eyebrow">KINORA Family</span>
+            <h2 data-i18n="apps.familyTitle">Clear for family, focused on what matters.</h2>
+            <ul class="check-list family-checks">
+              <li data-i18n="apps.family1">Today's status at a glance</li>
+              <li data-i18n="apps.family2">Changes compared with the personal baseline</li>
+              <li data-i18n="apps.family3">Evidence, recommendation and quick contact</li>
+            </ul>
+          </div>
+          <div class="mini-dashboard">
+            <div class="mini-state"><span>●</span><strong data-i18n="phone.lookCloser">Take a closer look</strong></div>
+            <div class="mini-row"><span>Activity</span><b>-28%</b></div>
+            <div class="mini-row"><span>Sleep</span><b>-1h</b></div>
+            <div class="mini-row"><span>Meal</span><b data-i18n="phone.mealValue">Breakfast was small</b></div>
+            <button data-i18n="phone.call">Call now</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="story" class="story-section">
+      <div class="shell story-grid">
+        <div class="story-image reveal">
+          <div class="character-trio story-trio" aria-label="KINORA companion characters">
+            <img class="trio-image" src="assets/mascot_trio.png" alt="KINORA companion characters" />
+          </div>
+        </div>
+        <div class="story-copy reveal delay-1">
+          <p class="hand-note" data-i18n="story.note">Small attention can brighten a parent's day.</p>
+          <h2><span class="nowrap" data-i18n="story.title1">Stay close,</span><br><span class="story-accent nowrap" data-i18n="story.title2">even from afar.</span></h2>
+          <p data-i18n="story.body">KINORA respects independent living. It helps the family notice meaningful changes without turning everyday life into surveillance.</p>
+          <p class="medical-note" data-i18n="story.medical">KINORA does not provide medical diagnosis. It supports everyday change awareness and family confirmation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+      <div class="shell faq-shell">
+        <div class="section-heading reveal">
+          <span class="section-eyebrow" data-i18n="faq.eyebrow">Frequently asked</span>
+          <h2 data-i18n="faq.title">KINORA in a few questions.</h2>
+        </div>
+        <details class="faq-item reveal"><summary data-i18n="faq.q1">Is KINORA a medical diagnosis service?</summary><p data-i18n="faq.a1">No. KINORA observes everyday changes and helps family members know when a human check-in may be useful.</p></details>
+        <details class="faq-item reveal"><summary data-i18n="faq.q2">Does the family see every conversation?</summary><p data-i18n="faq.a2">No. The guardian experience is designed around meaningful changes, evidence and recommended action rather than full conversation surveillance.</p></details>
+        <details class="faq-item reveal"><summary data-i18n="faq.q3">Which languages are supported?</summary><p data-i18n="faq.a3">Korean, English, Chinese, Japanese, Thai and Vietnamese. Unsupported browser languages fall back to English.</p></details>
+      </div>
+    </section>
+
+    <section id="preorder" class="final-cta">
+      <div class="shell final-cta-grid">
+        <div class="final-copy reveal">
+          <span class="brand-mini">KINORA ✦</span>
+          <h2><span class="nowrap" data-i18n="final.title1">Stay close,</span><br><span class="nowrap" data-i18n="final.title2">even from afar.</span></h2>
+          <p data-i18n="final.body">Don't miss the small changes in your parents. KINORA.</p>
+          <a class="button button-primary js-preorder" href="#preorder" data-i18n="final.cta">Join the pre-registration list</a>
+        </div>
+        <div class="character-trio final-trio reveal delay-1" aria-label="KINORA companion characters">
+            <img class="trio-image" src="assets/mascot_trio.png" alt="KINORA companion characters" />
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="preorderModal" class="preorder-modal" hidden aria-hidden="true">
+    <div class="preorder-backdrop" data-close-preorder></div>
+    <section class="preorder-dialog" role="dialog" aria-modal="true" aria-labelledby="preorderTitle">
+      <button class="preorder-close" type="button" aria-label="Close" data-close-preorder>×</button>
+      <span class="brand-mini">KINORA ✦</span>
+      <h2 id="preorderTitle" data-i18n="preorder.title">KINORA 출시 알림</h2>
+      <p data-i18n="preorder.body">출시 소식과 주요 업데이트를 받을 이메일 주소를 남겨주세요.</p>
+      <form id="preorderForm" novalidate>
+        <label for="preorderEmail" data-i18n="preorder.emailLabel">이메일 주소</label>
+        <input id="preorderEmail" name="email" type="email" autocomplete="email" inputmode="email" placeholder="name@example.com" required />
+        <input class="hp-field" name="company" type="text" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <label class="consent-row">
+          <input id="preorderConsent" name="consent" type="checkbox" required />
+          <span data-i18n="preorder.consent">출시 소식 안내를 위한 이메일 수집에 동의합니다.</span>
+        </label>
+        <p class="preorder-privacy" data-i18n="preorder.privacy">이메일은 KINORA 출시 안내 목적으로만 사용합니다.</p>
+        <div id="preorderMessage" class="preorder-message" role="status" aria-live="polite"></div>
+        <button id="preorderSubmit" class="button button-primary preorder-submit" type="submit" data-i18n="preorder.submit">출시 알람 받기</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <div class="shell footer-row">
+      <div class="footer-brand-block"><strong>KINORA</strong><small data-i18n="footer.tagline">AI companion × family connection</small></div>
+      <button id="developerContact" class="developer-contact" type="button" aria-label="Copy developer email">
+        <span class="developer-contact-label" data-i18n="footer.developer">Developer</span>
+        <span class="developer-contact-email">maccrey@maccrey.com</span>
+        <span class="developer-contact-copy" aria-hidden="true">⧉</span>
+      </button>
+      <p>© 2026 KINORA. <span data-i18n="footer.rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+  <div id="copyToast" class="copy-toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>
