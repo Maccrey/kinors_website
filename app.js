@@ -81,6 +81,14 @@ const translations = {
 
 const supported=['ko','en','zh','ja','th','vi'];
 const languageLabels={ko:'한국어',en:'English',zh:'中文',ja:'日本語',th:'ไทย',vi:'Tiếng Việt'};
+const seoMeta={
+  ko:{description:'KINORA는 AI 반려친구가 부모님과 자연스럽게 대화하고, 일상의 작은 변화를 살펴 가족에게 필요한 순간 연결해주는 새로운 가족 케어 서비스입니다.',keywords:'KINORA, AI 반려친구, 부모님 케어, 가족 케어, 노인 케어, AI 건강 관리, 시니어 케어, 가족 연결, 스마트 케어, 부모님 안부',locale:'ko_KR'},
+  en:{description:'KINORA is an AI companion and family-care service that talks naturally with parents, notices meaningful daily changes, and connects families when support matters.',keywords:'KINORA, AI companion, family care, senior care, elderly care, parent care, daily health changes, family connection, AI caregiver',locale:'en_US'},
+  zh:{description:'KINORA 是一项 AI 陪伴与家庭关怀服务，通过自然交流了解父母的日常变化，并在需要时连接家人。',keywords:'KINORA, AI陪伴, 家庭关怀, 老人照护, 父母照护, 健康变化, 家庭连接',locale:'zh_CN'},
+  ja:{description:'KINORAはAIの相棒が親御さんと自然に会話し、日常の変化を見守り、必要なときに家族へつなぐ家族ケアサービスです。',keywords:'KINORA, AI相棒, 家族ケア, 高齢者ケア, 親の見守り, 生活変化, 家族のつながり',locale:'ja_JP'},
+  th:{description:'KINORA คือบริการดูแลครอบครัวที่ใช้เพื่อน AI พูดคุยกับพ่อแม่อย่างเป็นธรรมชาติ สังเกตการเปลี่ยนแปลงในชีวิตประจำวัน และเชื่อมต่อครอบครัวเมื่อจำเป็น',keywords:'KINORA, เพื่อน AI, ดูแลครอบครัว, ดูแลผู้สูงอายุ, ดูแลพ่อแม่, การเปลี่ยนแปลงสุขภาพ, ครอบครัว',locale:'th_TH'},
+  vi:{description:'KINORA là dịch vụ đồng hành AI và chăm sóc gia đình, trò chuyện tự nhiên với cha mẹ, nhận biết thay đổi hằng ngày và kết nối gia đình khi cần.',keywords:'KINORA, bạn đồng hành AI, chăm sóc gia đình, chăm sóc người cao tuổi, chăm sóc cha mẹ, thay đổi sức khỏe, kết nối gia đình',locale:'vi_VN'}
+};
 function detectLanguage(){
   const list=navigator.languages?.length?navigator.languages:[navigator.language||'en'];
   for(const value of list){const base=String(value).toLowerCase().split('-')[0];if(supported.includes(base)) return base;}
@@ -93,15 +101,25 @@ function applyLanguage(lang){
   document.querySelectorAll('[data-i18n]').forEach(el=>{const key=el.dataset.i18n;el.textContent=dict[key]??translations.en[key]??el.textContent;});
   document.getElementById('currentLanguage').textContent=languageLabels[lang];
   localStorage.setItem('kinora-language',lang);
-  document.title=`KINORA — ${dict['hero.title1']} ${dict['hero.title2']}`;
+  const seo=seoMeta[lang]||seoMeta.en;
+  const seoTitle=`KINORA — ${dict['hero.title1']} ${dict['hero.title2']}`;
+  document.title=seoTitle;
+  document.getElementById('metaDescription').content=seo.description;
+  document.getElementById('metaKeywords').content=seo.keywords;
+  document.getElementById('ogTitle').content=seoTitle;
+  document.getElementById('ogDescription').content=seo.description;
+  document.getElementById('ogLocale').content=seo.locale;
+  document.getElementById('twitterTitle').content=seoTitle;
+  document.getElementById('twitterDescription').content=seo.description;
   restartTypingBubbles();
 }
 let typingTimers=[];
 function clearTypingTimers(){typingTimers.forEach(id=>clearTimeout(id));typingTimers=[];}
 function typeText(el,text,startDelay=0){el.classList.remove('done');el.textContent='';const chars=[...text];chars.forEach((char,index)=>{const timer=setTimeout(()=>{el.textContent+=char;if(index===chars.length-1){el.classList.add('done');}},startDelay+index*96);typingTimers.push(timer);});if(!chars.length){el.classList.add('done');}}
 function restartTypingBubbles(){clearTypingTimers();const bubbles=[...document.querySelectorAll('.typing-bubble')];bubbles.forEach((el,index)=>{const text=(el.textContent||'').trim();typeText(el,text,index*450);});}
+const requestedLanguage=new URLSearchParams(window.location.search).get('lang')?.toLowerCase();
 const saved=localStorage.getItem('kinora-language');
-applyLanguage(saved&&supported.includes(saved)?saved:detectLanguage());
+applyLanguage(supported.includes(requestedLanguage)?requestedLanguage:(saved&&supported.includes(saved)?saved:detectLanguage()));
 
 const languageButton=document.getElementById('languageButton');
 const languageMenu=document.getElementById('languageMenu');
